@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca CETEP/LNAB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="barra-pesquisa">
+            <input type="text" id="busca" placeholder="Buscar livros">
+            <button id="botao-busca">Buscar</button>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav-escondida" id="nav-escondida">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="busca.html">Buscar Livros</a></li>
+                <li><a href="historico.html">Histórico de Livros</a></li>
+                <li><a href="notificacoes.html">Notificações</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Livros em Destaque</h1>
+        <div class="carrossel" id="carrossel">
+            <!-- Livros serão adicionados aqui -->
+        </div>
+    </main>
+
+    <section id="historico-livros">
+        <h1>Histórico de Livros</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Data de Empréstimo</th>
+                    <th>Data de Devolução</th>
+                </tr>
+            </thead>
+            <tbody id="historico-livros-tbody">
+                <!-- Histórico de livros será adicionado aqui -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="notificacoes">
+        <h1>Notificações</h1>
+        <ul id="notificacoes-lista">
+            <!-- Notificações serão adicionadas aqui -->
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
