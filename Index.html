@@ -8,9 +8,9 @@
 </head>
 <body>
     <header>
-        <form class="barra-pesquisa" role="search">
+        <form class="barra-pesquisa" action="busca.html" method="get">
             <label for="busca" class="sr-only">Buscar livros</label>
-            <input type="text" id="busca" placeholder="Buscar livros" aria-label="Buscar livros">
+            <input type="text" id="busca" name="q" placeholder="Buscar livros" aria-label="Buscar livros">
             <button id="botao-busca" type="submit">Buscar</button>
         </form>
         <button class="menu-icon" id="menu-icon" aria-label="Abrir menu">
@@ -23,7 +23,6 @@
                 <li><a href="index.html">Início</a></li>
                 <li><a href="busca.html">Buscar Livros</a></li>
                 <li><a href="historico.html">Histórico de Livros</a></li>
-                <li><a href="#notificacoes">Notificações</a></li>
             </ul>
         </nav>
     </header>
@@ -32,52 +31,41 @@
         <section aria-labelledby="destaque-titulo">
             <h1 id="destaque-titulo">Livros em Destaque</h1>
             <div class="carrossel" id="carrossel" role="region" aria-live="polite">
-                <div class="livro">
-                    <img src="imagem.jpg" alt="Capa do Livro de Exemplo" class="img-responsive">
-                    <h3>Título do Livro Exemplo</h3>
-                    <p>Autor: Nome do Autor</p>
-                    <p>Descrição breve do livro exemplo para ilustrar como ficará a seção de livros em destaque.</p>
+                <button class="carousel-control prev" aria-label="Livro anterior">‹</button>
+                <div class="carousel-container">
+                    <div class="livro">
+                        <img src="https://photos.enjoei.com.br/public/1200x1200/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy82MDAwNDc4L2YxZjliZjNiZGZmNGYxY2I5MWQ4OWVjOWZjZmFjZDg1LmpwZw" alt="Capa do Livro 1" class="img-responsive">
+                        <h3>Anjo Mecânico</h3>
+                        <p>Cassandra Clare</p>
+                        <p>Em Anjo mecânico , primeiro livro da Saga As Peças Infernais , somos apresentados aos Caçadores de Sombras da Inglaterra vitoriana através de Tessa Gray: uma jovem órfã de 16 anos com poderes sobrenaturais intrigantes e cobiçados</p>
+                    </div>
+                    <div class="livro">
+                        <img src="imagens/capa2.jpg" alt="Capa do Livro 2" class="img-responsive">
+                        <h3>Título do Livro 2</h3>
+                        <p>Autor: Nome do Autor 2</p>
+                        <p>Descrição breve do livro 2.</p>
+                    </div>
+                    <div class="livro">
+                        <img src="imagens/capa3.jpg" alt="Capa do Livro 3" class="img-responsive">
+                        <h3>Título do Livro 3</h3>
+                        <p>Autor: Nome do Autor 3</p>
+                        <p>Descrição breve do livro 3.</p>
+                    </div>
+                    <div class="livro">
+                        <img src="imagens/capa4.jpg" alt="Capa do Livro 3" class="img-responsive">
+                        <h3>Título do Livro 3</h3>
+                        <p>Autor: Nome do Autor 3</p>
+                        <p>Descrição breve do livro 3.</p>
+                    </div>
+                    <div class="livro">
+                        <img src="imagens/capa5.jpg" alt="Capa do Livro 3" class="img-responsive">
+                        <h3>Título do Livro 3</h3>
+                        <p>Autor: Nome do Autor 3</p>
+                        <p>Descrição breve do livro 3.</p>
+                    </div>
                 </div>
-
-                <div class="livro">
-                    <img src="imagem 2.jpg" alt="Capa do Livro de Exemplo" class="img-responsive">
-                    <h3>Título do Livro Exemplo</h3>
-                    <p>Autor: Nome do Autor</p>
-                    <p>Descrição breve do livro exemplo para ilustrar como ficará a seção de livros em destaque.</p>
-                </div>
-                <div class="livro">
-                    <img src="imagem 3.jpg" alt="Capa do Livro de Exemplo" class="img-responsive">
-                    <h3>Título do Livro Exemplo</h3>
-                    <p>Autor: Nome do Autor</p>
-                    <p>Descrição breve do livro exemplo para ilustrar como ficará a seção de livros em destaque.</p>
-                </div>
+                <button class="carousel-control next" aria-label="Próximo livro">›</button>
             </div>
-
-
-        </section>
-
-        <section id="historico-livros" aria-labelledby="historico-titulo">
-            <h2 id="historico-titulo">Histórico de Livros</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Título</th>
-                        <th>Autor</th>
-                        <th>Data de Empréstimo</th>
-                        <th>Data de Devolução</th>
-                    </tr>
-                </thead>
-                <tbody id="historico-livros-tbody">
-                    <!-- Adicionar histórico dinâmico aqui -->
-                </tbody>
-            </table>
-        </section>
-
-        <section id="notificacoes" aria-labelledby="notificacoes-titulo">
-            <h2 id="notificacoes-titulo">Notificações</h2>
-            <ul id="notificacoes-lista">
-                <!-- Adicionar notificações dinâmicas aqui -->
-            </ul>
         </section>
     </main>
 
@@ -87,4 +75,4 @@
 
     <script src="script.js"></script>
 </body>
-    </html>
+</html>
