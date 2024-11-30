@@ -8,12 +8,24 @@ body {
 
 header {
     background-color: #6c5ce7;
-    color: #fff;
+    color: #fff;0
     padding: 1em;
     text-align: center;
     position: relative;
+    z-index: 1000;
 }
 
+.livro-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.img-responsive {
+    width: 100%<;
+    height: auto;
+    display: block;
+}
 
 .menu-icon {
     display: inline-block;
@@ -22,32 +34,29 @@ header {
     top: 5px;
     right: 5px;
     padding: 8px;
-    background-color: #6c5ce7; 
-    border-radius: 5px; 
+    background-color: #6c5ce7;
+    border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
-}
-
-.menu-icon:hover {
-    background-color: #4f69c6; 
+    z-index: 1100;
 }
 
 .menu-icon span {
     display: block;
     width: 22px;
-    height: 2px; 
-    background-color: #fff; 
-    margin: 4px 0; 
+    height: 2px;
+    background-color: #fff;
+    margin: 4px 0;
 }
 
 .nav-escondida {
-    display: block;
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
+    width: 100%;
     background-color: #6c5ce7;
     padding: 1em;
-    display: none;
+    z-index: 1050;
 }
 
 .nav-escondida ul {
@@ -61,74 +70,58 @@ header {
 }
 
 .nav-escondida a {
-    color: #6c5ce7;
+    color: #fff;
     text-decoration: none;
 }
 
-
-.img-responsive {
-    width: 100%;
-    height: auto;
+.nav-escondida.show {
     display: block;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 2em;
 }
 
-h1 {
-    color: #4f69c6;
-}
-
-h2 {
-    color: #4f69c6;
-}
-
 .carrossel {
-    display: flex; 
-    overflow-x: auto; 
-    scroll-behavior: smooth; 
-    padding: 20px; 
-    gap: 20px; 
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
-.carrossel .livro {
-    display: inline-block;
-    margin: 10px;
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+}
+
+.livro {
+    flex: 0 0 auto;
     width: 200px;
-    height: 250px;
-    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.5s ease;
+    text-align: center;
 }
 
-.carrossel .livro:hover {
-    transform: scale(1.1);
+.carousel-control {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #6c5ce7;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
+.carousel-control.prev {
+    left: 10px;
 }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
+.carousel-control.next {
+    right: 10px;
 }
-
-th {
-    background-color: #f0f0f0;
-}
-
-#notificacoes {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
